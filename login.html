@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MyMusic</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+        text-align: left;
+      }
+      .logo-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 10;
+      }
+      .content {
+        margin-top: 50;
+      }
+      
+      @media (max-width: 600) {
+        .content {
+          padding: 10;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo-container">
+      <img src="logo.png" alt="MyMusic logo">
+    </div>
+    <img src="MyMusic.png" alt="MyMusic text logo">
+    <h3>Welcome to MyMusic!&#x1f44b;</h3>
+    <h5>Please sign-in your account and start the adventure</h5>
+  <form>
+    <label for="email"> Email :</label>
+    <input type="text" id="email" name="email" required>
+    <br>
+    <label for="password"> Password :</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <div class="form-row">
+      <div class="remember-me">
+        <input type="checkbox" id="remember-me" name="remember-me">
+        <label for="remember-me">Remember Me</label>
+      </div>
+      <a href="forgot_password.html" class="forgot-password">Forgot Password?</a>
+    </div>
+    <div style="text-align: center;">
+      <button type="submit" style="margin: 0 auto;">Login</button>
+      <br>
+      <p>New on our platform?<a href="register.html" role="button" target="_blank"> Create an account</a></p>
+      <p style="display: inline-block; margin: 0;">or</p>
+    <button type="button" onclick="window.location.href='http://www.Google.com'" style="margin: 0 auto;">
+      <img src="logogoogle.png" alt="Google_logo " width="20"> Login with Google
+    </button> 
+  </div>
+</form>
+</body>
+</html>
