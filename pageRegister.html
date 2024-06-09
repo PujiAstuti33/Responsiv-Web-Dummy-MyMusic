@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img class="MyMusic" src="assets/MyMusic.png" alt="MyMusic">
+    </header>
+    <div class="container">
+        <img src="assets/MyMusic.png" alt="MyMusic">
+        <h2>Welcome to MyMusic!&#128075;</h2>
+        <p>Please sign-in to your account and start the adventure</p>
+        <br>
+        <form id="loginform" action="login_process.php" method="post">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required>
+            <br>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <div class="options-container">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember-me" name="remember-me">
+                    <label for="remember-me">Remember Me</label>
+                </div>
+                <a href="forgot_password.html" class="forgot_password">Forgot Password</a>
+            </div>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+        <p>New on our platform? <a href="pageRegister.html">Create an account</a></p>    
+        <br>
+        <div class="separator">
+            <span>or</span>
+        </div>
+        <br>
+        <form>
+        <button type="button" onclick="window.location.href='https://www.google.com'">
+            <img src="assets/logogoogle.png" alt="google_logo" width="20px"> Login with Google
+        </button>
+        </form>  
+    </div>
+
+    <script>
+        document.getElementById('loginform').addEventListener('submit', function(event) {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if (!email || !password) {
+                event.preventDefault();
+                alert('please enter both email and password.');
+            }
+        });
+    </script>
+</body>
+</html>
